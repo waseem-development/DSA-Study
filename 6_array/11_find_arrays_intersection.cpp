@@ -1,39 +1,54 @@
 #include <iostream>
-void checkUniqueness(int arr[], int size)
+void findIntersection(int arr0[], int size0, int arr1[], int size1)
 {
-    std::cout << "Unique values of the array are: ";
-    for (int i = 0; i < size; i++)
+    int intersectionArray[] = {};
+    int count = 0;
+    for (int i = 0; i < size0; i++)
     {
-        bool isUnique = true;
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < size1; j++)
         {
-            if (i != j && arr[i] == arr[j])
+            if (arr0[i] = arr1[j])
             {
-                isUnique = false;
-                break;
+                intersectionArray[count] = arr1[j];
+                count++;
             }
         }
-        if (isUnique)
-        {
-            std::cout << arr[i] << " ";
-        }
     }
+    std::cout<<"Intersected aray: ";
+    for (int i = 0; i <= count ; i++)
+    {
+        std::cout<<intersectionArray[i];
+    }
+    
     std::cout << std::endl;
 }
 
 int main()
 {
-    int size;
-    std::cout << "Enter the size of array: ";
-    std::cin >> size;
+    int size0, size1;
 
-    int arr[size];
-    for (int i = 0; i < size; i++)
+    std::cout << "Enter the size of arr0: ";
+    std::cin >> size0;
+
+    int arr0[size0];
+    int arr1[size1];
+
+    for (int i = 0; i < size0; i++)
     {
         std::cout << "Enter " << i + 1 << "th value of the array: ";
-        std::cin >> arr[i];
+        std::cin >> arr0[i];
     }
+    std::cout << "\n\n";
 
-    checkUniqueness(arr, size);
+    std::cout << "\nEnter the size of arr1: ";
+    std::cin >> size1;
+    for (int i = 0; i < size1; i++)
+    {
+        std::cout << "Enter " << i + 1 << "th value of the arr1: ";
+        std::cin >> arr1[i];
+    }
+    std::cout << "\n";
+
+    findIntersection(arr0, size0, arr1, size1);
     return 0;
 }
