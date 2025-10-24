@@ -1,38 +1,26 @@
 #include <stdio.h>
-void squareArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        arr[i] = arr[i] * arr[i];
+
+void printArray(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]); // Corrected printf
     }
+    printf("\n");
 }
 
-int main()
-{
-    int size;
+int main() {
+    int n;
     printf("Enter the size of array: ");
-    scanf("%d", &size);
-
-    int arr[size];
-
-    for (int i = 0; i < size; i++)
-    {
-        printf("Enter %d value of the array: ", i+1);
+    scanf("%d", &n);
+    int arr[n];
+    
+    // Input array elements
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
-    squareArray(arr, size);
-    printf("[");
-    for (int i = 0; i < size; i++)
-    {
-        if (i == size-1)
-        {
-            printf(arr[i]);
-        } else {
-            printf("%d, ", arr[i]);
-        }
-    }
-        printf("]\n");
-
+    
+    // Call function (example of pass-by-reference)
+    printArray(arr, n);
+    
     return 0;
 }
