@@ -29,8 +29,7 @@ int main()
     std::cout << "Enter the target value to search: ";
     std::cin >> target;
 
-    std::cout<<"Target value is present at "<<linearSearch(arr, size, target)<<std::endl;;
-
+    std::cout<<"Target value is present at "<<linearSearch(arr, size, target)<<"\n";;
 
     return 0;
 }
