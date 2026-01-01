@@ -7,11 +7,12 @@ int main() {
     {
         for (int end = start; end < n; end++)
         {
+            std::cout<<"{";
             for (int i = start; i <= end; i++)
             {
                 std::cout<<nums[i];
             }
-            std::cout<<" ";
+            std::cout<<"} ";
         }
         std::cout<<"\n";
     }

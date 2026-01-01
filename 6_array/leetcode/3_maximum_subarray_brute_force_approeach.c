@@ -2,7 +2,7 @@
 #include <limits.h>
 int main()
 {
-    int nums[7] = {3, -4, 5, 4, -1, 7, -8};
+    int nums[3] = {3, -4, 5, 4, -1, 7, -8};
     int n = 7;
     int maximumSum = INT_MIN;
     for (int start = 0; start < n; start++)
