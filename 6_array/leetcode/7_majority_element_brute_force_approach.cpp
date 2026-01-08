@@ -25,7 +25,5 @@ int main()
 {
     std::vector<int> nums = {2, 2, 2, 2, 1, 1, 1};
     std::cout<<"Majority Element: "<<majorityElement(nums)<<"\n";
-    
-
     return 0;
 }
