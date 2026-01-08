@@ -5,7 +5,7 @@ int majorityElement(const std::vector<int> &nums)
     int n = nums.size();
     int majorityElement;
     for(int value : nums) {
-        int frequency = 0;
+        int frequency = 1;
         for (int element : nums) {
             if (element == value)
             {
