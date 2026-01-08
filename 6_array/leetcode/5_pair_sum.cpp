@@ -1,18 +1,17 @@
 #include <iostream>
 #include<vector>
-bool pairSum(int target, std::vector<int> nums, std::vector<int> result){
-    for (int start = 0; start < nums.size(); start++)
+bool pairSum(int target, const std::vector<int>& nums, std::vector<int>& result){
+    for (size_t start = 0; start < nums.size(); start++)
     {
-        for (int end = start+1; end < nums.size(); end++)
+        for (size_t end = start + 1; end < nums.size(); end++)
         {
             if (nums[start] + nums[end] == target) {
-                result.push(nums[start]);
-                result.push(nums[end]);
+                result.push_back(nums[start]);
+                result.push_back(nums[end]);
                 return true;
             }
         }
     }
-
     return false;
 }
 int main()
